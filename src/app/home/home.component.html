@@ -1,0 +1,24 @@
+<mat-toolbar class="home-nav">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>OMG Travels</span>
+        <span class="nav-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+            <mat-icon class="nav-icon" aria-hidden="false" aria-label="nav heart icon">account_circle</mat-icon>
+            <mat-icon class="nav-icon" aria-hidden="false" aria-label="nav delete icon">delete</mat-icon>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container fxFlexFill fxHide.gt-sm>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <a (click)="sidenav.toggle()" mat-list-item>Close</a>
+            <a href="#" mat-list-item>Menu Item 1</a>
+            <a mat-list-item>
+                <mat-icon class="nav-icon" aria-hidden="false" aria-label="nav heart icon">account_circle</mat-icon>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>
